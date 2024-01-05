@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cybersecurity</title>
+		<!--CSS file-->
+		<link rel="stylesheet" href="styles.css" />
+<!--icon style-->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+				<!--Jquery CDN Link-->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		</head>
+
+		<body>
+
+				<!--Page Header Division-->
+				<div class="page-header">
+						<div class="banner">
+								<img src="banner.png" alt="Banner Image">
+								<!-- Header text centered on the banner -->
+								<h1>The Problem</h1>
+
+								<!--menu button-->
+								<div class="menu-btn">
+										<i class="fas fa-bars"></i>
+								</div>
+
+						</div>
+				</div>
+
+				<!--Main Division-->
+				<div class="main">
+
+						<!--Displays Large Text-->
+						<h3>In today's interconnected world, the threat of cyber attacks looms large. The digital landscape, while offering unprecedented opportunities for communication and innovation, has become a breeding ground for a diverse array of cyber threats.</h3>
+
+						<!--Displays image-->
+						<div class="image-container3">
+								<img src="p1.png" alt="">
+						</div>
+
+						<p>Advanced Persistent Threats (APTs) orchestrated by both state-sponsored and independent actors lurk in the shadows, employing sophisticated techniques to infiltrate systems and siphon off sensitive information unnoticed. These prolonged and subtle attacks are emblematic of the evolving nature of cyber threats, requiring a heightened level of vigilance and resilience.</p>
+
+					<p>One of the most pressing issues in the realm of cybersecurity is the surge in ransomware attacks. Malicious actors exploit vulnerabilities in organizational defenses, encrypting vital data and holding it hostage until a ransom is paid. Beyond the immediate financial toll, these attacks disrupt critical operations and erode the trust that individuals and businesses place in digital systems. Simultaneously, the art of deception through phishing and social engineering remains a persistent challenge. Cybercriminals leverage psychological manipulation to deceive individuals into unwittingly providing access credentials or other sensitive information, underscoring the human element as a vulnerable point in the cybersecurity chain.</p>
+
+					<p>Furthermore, the proliferation of Internet of Things (IoT) devices has introduced a new frontier for potential security breaches. Insecure IoT devices serve as entry points for cyber attackers, opening avenues for unauthorized access, data breaches, and even potential manipulation of critical infrastructure. The interconnectedness of supply chains also amplifies the risk, as cybercriminals exploit vulnerabilities within the chain to compromise software updates, hardware components, or third-party services. This multifaceted problem requires a nuanced and comprehensive approach to cybersecurity, addressing both the technical and human factors at play in order to build a resilient defense against the ever-evolving landscape of cyber threats.</p>
+
+						<!--Displays Header with padding-->
+						<div class="header-padding">
+								<h2>Why Care?</h2>
+						</div>
+
+						<!--Displays text-->
+						<p>Understanding and actively addressing the pervasive issue of cybersecurity is paramount for every individual in the digital age. In a world where our personal and professional lives are intricately woven into the fabric of the internet, the consequences of neglecting cybersecurity are far-reaching and impactful. For individuals, it translates to safeguarding personal data, financial information, and even aspects as intimate as family photos or correspondence. A breach in cybersecurity could mean falling victim to identity theft, financial fraud, or the loss of cherished digital memories. Beyond personal concerns, recognizing the importance of cybersecurity is crucial in contributing to the collective resilience of our interconnected society.</p>
+
+				</div>
+
+		<!--Side Bar Division-->
+		<div class="side-bar">
+				<!--Header section-->
+				<header>
+						<!--Close button-->
+						<div class="close-btn">
+								<i class="fas fa-times"></i>
+						</div>
+				</header>
+
+				<!--Menu Items-->
+				<div class="menu">
+
+						<!--Displays and links to Home webpage-->
+						<div class="item"><a href="home.html"><i class="fa-solid fa-house"></i>Home</a></div>
+
+						<!--Displays and links to Types webpage-->
+						<div class="item"><a href="types.html"><i class="fa-solid fa-cookie"></i>Types</a></div>
+
+						<!--Displays and links to the Problem webpage-->
+						<div class="item"><a href="problem.html"><i class="fa-solid fa-question"></i>The Problem</a></div>
+
+						<!--Displays Case Studies webpages dropdown-->
+						<div class="item"><a class="sub-btn"><i class="fa-solid fa-seedling"></i>Case Studies
+										<!--Dropdown arrow-->
+										<i class="fas fa-angle-right dropdown"></i>
+								</a>
+								<!--Sub-menu of Impacts-->
+								<div class="sub-menu">
+										<!--Displays and links to first case study webpage-->
+										<a href="caseStudy1.html" class="sub-item">The Healthcare Hijack</a>
+
+										<!--Displays and links to second case study Webpage-->
+										<a href="caseStudy2.html" class="sub-item">DNC Email Hack</a>
+								</div>
+						</div>
+
+					<!--Displays Solution webpage-->
+					<div class="item"><a href="sol.html"><i class="fa-regular fa-hand-point-up"></i>Solution</a></div>
+					</div>
+		</div>
+
+		<!--Javascript-->
+		<script>
+				$(document).ready(function () {
+						//Jquery for expanding the sidebar (menu button)
+						$('.menu-btn').click(function () {
+								//adds "active" class so sidebar it becomes visible
+								$('.side-bar').addClass('active');
+								//hides the menu button (3 bars) when side bar is open
+								$('.menu-btn').css("visibility", "hidden");
+						});
+
+						//Jquery for closing the sidebar (close button)
+						$('.close-btn').click(function () {
+								//removes "active" class so sidebar it becomes invisible
+								$('.side-bar').removeClass('active');
+								//shows the menu button (3 bars) when side bar is closed
+								$('.menu-btn').css("visibility", "visible");
+						});
+
+						//Jquery for toggle sub menus
+						$('.sub-btn').click(function () {
+								//Opens the submenu when the sub button is clicked
+								$(this).next('.sub-menu').slideToggle();
+								//Rotates the dropdown arrow
+								$(this).find('.dropdown').toggleClass('rotate');
+						});
+				})
+		</script>
+
+</body>

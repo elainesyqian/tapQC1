@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cybersecurity</title>
+		<!--CSS file-->
+		<link rel="stylesheet" href="styles.css" />
+<!--icon style-->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+				<!--Jquery CDN Link-->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		</head>
+
+		<body>
+
+				<!--Page Header Division-->
+				<div class="page-header">
+						<div class="banner">
+								<img src="banner.png" alt="Banner Image">
+								<!-- Header text centered on the banner -->
+								<h1>DNC Email Hack</h1>
+
+								<!--Menu button-->
+								<div class="menu-btn">
+										<i class="fas fa-bars"></i>
+								</div>
+
+						</div>
+				</div>
+
+				<!--Main Division-->
+				<div class="main">
+
+					<!--Displays text-->
+					<h2>Background</h2>
+
+					<p>Russian hackers, affiliated with Fancy Bear, sent spear phishing emails to key Democratic National Committee personnel in 2016 during the U.S. presidential election. The emails appeared legitimate, tricking recipients into revealing their login credentials. The attackers gained unauthorized access to sensitive emails and documents.</p>
+
+						<!--Row and column divisions for image display and formatting-->
+					<div class="row">
+							<div class="image-column">
+									<img src="c2.png" alt="">
+							</div>
+							<div class="image-column">
+											<img src="c3.png" alt="">
+									</div>
+							<div class="image-column">
+									<img src="c4.png" alt="">
+							</div>
+					</div>
+
+						<!--Displays text-->
+					<h2>Defensive Measures</h2>
+
+					<p>While the DNC had security measures in place, the targeted nature of the spear phishing emails, coupled with the attackers' use of social engineering techniques, made detection challenging. The DNC later enlisted the help of cybersecurity firms to investigate the breach and enhance their defenses.</p>
+
+					<h2>Prevention and Mitigation</h2>
+
+					<p>The incident underscored the need for continuous employee training on recognizing phishing attempts. In response, organizations, including political entities, increased efforts to educate staff about the risks of spear phishing. Additionally, improvements in email security protocols and advanced threat detection tools were implemented to mitigate future attacks.</p>
+
+				</div>
+
+		<!--Side Bar Division-->
+		<div class="side-bar">
+				<!--Header section-->
+				<header>
+						<!--Close button-->
+						<div class="close-btn">
+								<i class="fas fa-times"></i>
+						</div>
+				</header>
+
+				<!--Menu Items-->
+				<div class="menu">
+
+						<!--Displays and links to Home webpage-->
+						<div class="item"><a href="home.html"><i class="fa-solid fa-house"></i>Home</a></div>
+
+						<!--Displays and links to Types webpage-->
+						<div class="item"><a href="types.html"><i class="fa-solid fa-cookie"></i>Types</a></div>
+
+						<!--Displays and links to the Problem webpage-->
+						<div class="item"><a href="problem.html"><i class="fa-solid fa-question"></i>The Problem</a></div>
+
+						<!--Displays Case Studies webpages dropdown-->
+						<div class="item"><a class="sub-btn"><i class="fa-solid fa-seedling"></i>Case Studies
+										<!--Dropdown arrow-->
+										<i class="fas fa-angle-right dropdown"></i>
+								</a>
+								<!--Sub-menu of Impacts-->
+								<div class="sub-menu">
+										<!--Displays and links to first case study webpage-->
+										<a href="caseStudy1.html" class="sub-item">The Healthcare Hijack</a>
+
+										<!--Displays and links to second case study Webpage-->
+										<a href="caseStudy2.html" class="sub-item">DNC Email Hack</a>
+								</div>
+						</div>
+
+					<!--Displays Solution webpage-->
+					<div class="item"><a href="sol.html"><i class="fa-regular fa-hand-point-up"></i>Solution</a></div>
+					</div>
+		</div>
+
+		<!--Javascript-->
+		<script>
+				$(document).ready(function () {
+						//Jquery for expanding the sidebar (menu button)
+						$('.menu-btn').click(function () {
+								//adds "active" class so sidebar it becomes visible
+								$('.side-bar').addClass('active');
+								//hides the menu button (3 bars) when side bar is open
+								$('.menu-btn').css("visibility", "hidden");
+						});
+
+						//Jquery for closing the sidebar (close button)
+						$('.close-btn').click(function () {
+								//removes "active" class so sidebar it becomes invisible
+								$('.side-bar').removeClass('active');
+								//shows the menu button (3 bars) when side bar is closed
+								$('.menu-btn').css("visibility", "visible");
+						});
+
+						//Jquery for toggle sub menus
+						$('.sub-btn').click(function () {
+								//Opens the submenu when the sub button is clicked
+								$(this).next('.sub-menu').slideToggle();
+								//Rotates the dropdown arrow
+								$(this).find('.dropdown').toggleClass('rotate');
+						});
+				})
+		</script>
+
+</body>

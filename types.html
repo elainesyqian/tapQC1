@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cybersecurity</title>
+		<!--CSS file-->
+		<link rel="stylesheet" href="styles.css" />
+<!--icon style-->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+				<!--Jquery CDN Link-->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		</head>
+
+		<body>
+
+				<!--Page Header Division-->
+				<div class="page-header">
+						<div class="banner">
+								<img src="banner.png" alt="Banner Image">
+								<!-- Header text centered on the banner -->
+								<h1>Types of Cybersecurity</h1>
+
+								<!--menu button-->
+								<div class="menu-btn">
+										<i class="fas fa-bars"></i>
+								</div>
+
+						</div>
+				</div>
+
+				<!--Main Division-->
+				<div class="main">
+
+						<!--Row and column divisions for formatting-->
+						<div class="row">
+								<div class="column">
+
+										<!--Displays icon-->
+										<div class="image-container2">
+												<img src="t1.png" alt="">
+										</div>
+
+										<!--Displays header-->
+										<h2>Network Security</h2>
+
+										<!--Displays text-->
+										<p>Network security is a fundamental pillar of cybersecurity that focuses on safeguarding the integrity and confidentiality of data during its transmission across networks. This includes protecting both wired and wireless networks from unauthorized access, cyber attacks, and data breaches. Implementing firewalls, intrusion detection systems, and virtual private networks (VPNs) are key components of network security, creating barriers to potential threats and ensuring the secure flow of information within an organization.</p>
+								</div>
+
+								<div class="column">
+
+										<!--Displays icon-->
+										<div class="image-container2">
+												<img src="t2.png" alt="">
+										</div>
+
+										<!--Displays header-->
+										<h2>Endpoint Security</h2>
+
+										<!--Displays text-->
+										<p>Endpoint security is dedicated to fortifying individual devices such as computers, laptops, and mobile devices against malicious attacks. As these endpoints often serve as entry points for cyber threats, protecting them is paramount. Endpoint security involves deploying antivirus software, anti-malware solutions, and encryption tools to defend against various forms of malware, phishing attempts, and unauthorized access. Regularly updating and patching software on endpoints is a critical practice to address vulnerabilities and maintain a robust defense.</p>
+
+								</div>
+						</div>
+
+						<div class="row">
+								<div class="column">
+
+										<!--Displays icon-->
+										<div class="image-container2">
+												<img src="t3.png" alt="">
+										</div>
+
+										<!--Displays header-->
+										<h2>Cloud Security</h2>
+
+										<!--Displays text-->
+										<p>In the era of cloud computing, securing data and applications stored in the cloud is a vital aspect of cybersecurity. Cloud security ensures the protection of sensitive information hosted on cloud platforms by employing encryption, access controls, and multi-factor authentication. This type of cybersecurity addresses the shared responsibility model, emphasizing collaboration between cloud service providers and users to create a secure cloud environment. With the increasing reliance on cloud services, effective cloud security measures are essential for preventing data breaches and unauthorized access.</p>
+								</div>
+
+								<div class="column">
+
+										<!--Displays icon-->
+										<div class="image-container2">
+												<img src="t4.png" alt="">
+										</div>
+
+										<!--Displays header-->
+										<h2>Application Security</h2>
+
+										<!--Displays text-->
+										<p>Application security focuses on securing software and applications from potential threats and vulnerabilities. As applications are integral to various business processes, ensuring their resilience is crucial. This involves implementing secure coding practices, conducting regular security assessments, and addressing vulnerabilities during the development life cycle. Web application firewalls, code analysis tools, and penetration testing are tools and techniques commonly employed in application security. By fortifying applications against exploitation, organizations can significantly reduce the risk of cyber attacks targeting their software infrastructure.</p>
+
+								</div>
+						</div>
+
+		<!--Side Bar Division-->
+		<div class="side-bar">
+				<!--Header section-->
+				<header>
+						<!--Close button-->
+						<div class="close-btn">
+								<i class="fas fa-times"></i>
+						</div>
+				</header>
+
+				<!--Menu Items-->
+				<div class="menu">
+
+						<!--Displays and links to Home webpage-->
+						<div class="item"><a href="home.html"><i class="fa-solid fa-house"></i>Home</a></div>
+
+						<!--Displays and links to Types webpage-->
+						<div class="item"><a href="types.html"><i class="fa-solid fa-cookie"></i>Types</a></div>
+
+						<!--Displays and links to the Problem webpage-->
+						<div class="item"><a href="problem.html"><i class="fa-solid fa-question"></i>The Problem</a></div>
+
+						<!--Displays Case Studies webpages dropdown-->
+						<div class="item"><a class="sub-btn"><i class="fa-solid fa-seedling"></i>Case Studies
+										<!--Dropdown arrow-->
+										<i class="fas fa-angle-right dropdown"></i>
+								</a>
+								<!--Sub-menu of Impacts-->
+								<div class="sub-menu">
+										<!--Displays and links to first case study webpage-->
+										<a href="caseStudy1.html" class="sub-item">The Healthcare Hijack</a>
+
+										<!--Displays and links to second case study Webpage-->
+										<a href="caseStudy2.html" class="sub-item">DNC Email Hack</a>
+								</div>
+						</div>
+
+					<!--Displays Solution webpage-->
+					<div class="item"><a href="sol.html"><i class="fa-regular fa-hand-point-up"></i>Solution</a></div>
+					</div>
+		</div>
+
+		<!--Javascript-->
+		<script>
+				$(document).ready(function () {
+						//Jquery for expanding the sidebar (menu button)
+						$('.menu-btn').click(function () {
+								//adds "active" class so sidebar it becomes visible
+								$('.side-bar').addClass('active');
+								//hides the menu button (3 bars) when side bar is open
+								$('.menu-btn').css("visibility", "hidden");
+						});
+
+						//Jquery for closing the sidebar (close button)
+						$('.close-btn').click(function () {
+								//removes "active" class so sidebar it becomes invisible
+								$('.side-bar').removeClass('active');
+								//shows the menu button (3 bars) when side bar is closed
+								$('.menu-btn').css("visibility", "visible");
+						});
+
+						//Jquery for toggle sub menus
+						$('.sub-btn').click(function () {
+								//Opens the submenu when the sub button is clicked
+								$(this).next('.sub-menu').slideToggle();
+								//Rotates the dropdown arrow
+								$(this).find('.dropdown').toggleClass('rotate');
+						});
+				})
+		</script>
+
+</body>

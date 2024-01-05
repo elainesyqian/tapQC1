@@ -1,0 +1,314 @@
+/*import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Handjet&family=IBM+Plex+Mono:wght@300&display=swap');
+
+/*sets ratio*/
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/*default setup*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono";
+}
+
+/*background style*/
+body{
+  min-height: 100vh;
+  background: #F1FAEE;
+  background-size: cover;
+  background-position: center;
+}
+
+/*sidebar style*/
+.side-bar{
+  background-color: #A8DADC;
+  /*sizing*/
+  width: 300px;
+  left: -300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  /*transition for when it opens*/
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+
+/*style for the close button fo sidebar*/
+.close-btn{
+  position: absolute;
+  color: #1D3557;
+  font-size: 23px;
+  right: 0px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+/*navbar menu*/
+.menu{
+  width: 100%;
+  margin-top: 50px;
+}
+
+/*position for each item in the menu*/
+.menu .item{
+  position: relative;
+  cursor: pointer;
+}
+
+/*style for the menu item*/
+.menu .item a{
+  color: #1D3557;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 35px;
+}
+
+/*style for each menu item*/
+.item i{
+  margin-right: 15px;
+}
+
+/*style for the menu item when dropped down*/
+.item a .dropdown{
+  position: absolute;
+  right: 0;
+  margin: 5px;
+  margin-right: 20px;
+  transition: 0.3s ease;
+}
+
+/*backgroud of dropped down items*/
+.item .sub-menu{
+  background: #F1FAEE;
+  display:none;
+}
+
+/*style for menu button (3 bars)*/
+.menu-btn{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  color: #457B9D;
+  font-size: 35px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+/*when the side bar is active, make it reappear*/
+.side-bar.active{
+  left: 0;
+}
+
+/*style for item*/
+.item .side-bar a{
+   padding-left: 80px;
+}
+
+/*rotates dropwdown button*/
+.rotate{
+   transform: rotate(90deg);
+}
+
+
+/*style for page header*/
+.page-header {
+  width: 100%;
+}
+
+/*style for banner*/
+.banner {
+  position: relative;
+}
+
+/*style for banner image*/
+.banner img {
+  width: 100%;
+  height: 20%;
+  display: block;
+}
+
+/*style for header 1*/
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #457B9D;
+  text-align: center;
+  margin: 0;
+  font-size: 50px;
+  font-family: "Handjet";
+}
+
+/*style for header 2*/
+h2{
+  padding-top: 10px;
+  font-size: 30px;
+  text-align: left;
+  font-family: "Handjet";
+  color: #1D3557;
+}
+
+/*style for header 3*/
+h3{
+  padding-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  color: #1D3557;
+}
+
+/*style for paragraph*/
+p{
+  padding-top: 15px;
+  padding-left: 9px;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  text-align: left;
+  color: #457B9D;
+}
+
+/*style for main*/
+.main{
+  padding-top: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/*style for image container type 1*/
+.image-container1{
+  float: right;
+  border: 1px dotted #1D3557;
+  margin: 15px 15px 15px 15px;
+}
+
+.image-container1 img{
+  width: 500px;
+  height: auto;
+}
+
+/*style for columns (class)*/
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+/*style for images in columns*/
+.column img{
+  width: 100%;
+  height: auto;
+}
+
+/*style for image-column class*/
+.image-column{
+  float: left;
+  width: 33%;
+  padding: 10px;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+/*style for images in image-column class*/
+.image-column img{
+  width: 100%;
+  height: auto;
+}
+
+/*for multiple rows of columns*/
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*style for image-container2*/
+.image-container2 img{
+  float: left;
+  margin: 5px 15px 5px 5px;
+  height: 40px;
+  width: 40px;
+}
+
+/*style for small h3 text*/
+.small-text h3{
+  font-size: 18px;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  color: #457B9D;
+}
+
+/*style for extra-padding*/
+.extra-padding{
+  padding: 15px;
+}
+
+/*style for unordered lists*/
+ul{
+  padding-top: 5px;
+  padding-left: 40px;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  text-align: left;
+  color: #1D3557;
+}
+
+/*style for list items*/
+li{
+  padding-top: 10px;
+}
+
+/*style for image-container3*/
+.image-container3 img{
+  width: 100%;
+  height: 100%;
+  border: 1px dotted #1D3557;
+}
+
+/*padding for header*/
+.header-padding {
+  padding-top: 20px;
+}
+
+/*style for image-container4*/
+.image-container4 img{
+  float: left;
+  border: 1px dotted #1D3557;
+  margin: 15px 15px 15px 0px;
+  width: 40%;
+}
+
+/*style for h4*/
+h4{
+  padding-top: 10px;
+  padding-left: 6px;
+  font-size: 20px;
+  text-align: left;
+  font-family: "IBM Plex Mono";
+  color: #1D3557;
+}
+
+/*style for h5*/
+h5{
+  padding-top: 8px;
+  padding-left: 11px;
+  font-size: 18px;
+  text-align: left;
+  font-family: "Handjet";
+  color: #1D3557;
+}
+
+/*style and setup for footer*/
+.footer {
+  background-color: #A8DADC;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}

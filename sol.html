@@ -1,0 +1,169 @@
+<!--
+Author: Elaine Qian
+Date: December 4th, 2023
+Topic: Digital Bias
+Webpage: Individual Solutions
+Challenge Features: Pop up + Dropdown; Element that moves down as user scrolls (Menu button and Side bar)
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Cybersecurity</title>
+		<!--CSS file-->
+		<link rel="stylesheet" href="styles.css" />
+<!--icon style-->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+				<!--Jquery CDN Link-->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		</head>
+
+		<body>
+
+				<!--Page Header Division-->
+				<div class="page-header">
+						<div class="banner">
+								<img src="banner.png" alt="Banner Image">
+								<!-- Header text centered on the banner -->
+								<h1>Solutions</h1>
+
+								<!--menu button-->
+								<div class="menu-btn">
+										<i class="fas fa-bars"></i>
+								</div>
+
+						</div>
+				</div>
+
+				<!--Main Division-->
+				<div class="main">
+
+						<!--Displays large text-->
+						<h3>Combatting cyber threats requires a comprehensive approach. Here are some key solutions to fortify your digital defenses: What can YOU do?</h3>
+
+						<!--Row and column divisions for formatting-->
+						<div class="row">
+								<div class="column">
+										<!--Displays Header-->
+										<h2>Implement Best Practices</h2>
+
+										<!--Displays text-->
+										<p>Staying vigilant involves adopting and consistently applying cybersecurity best practices. Regularly updating software, using strong and unique passwords, and enabling two-factor authentication are fundamental steps in fortifying your digital defenses. By cultivating a culture of security awareness, individuals and organizations can significantly reduce the risk of falling victim to common cyber attacks.</p>
+								</div>
+
+								<!--Displays image-->
+								<div class="column">
+										<img src="s1.png" alt="">
+								</div>
+						</div>
+
+						<!--Adds padding to header-->
+						<div class="header-padding">
+								<!--Displays Header-->
+								<h2>Deploy Security Tools and Technologies</h2>
+
+								<!--Displays Text-->
+								<p>Investing in reliable cybersecurity tools and technologies is essential for creating a robust defense mechanism. Antivirus software, firewalls, and intrusion detection systems are pivotal in identifying and thwarting potential threats. Embracing cutting-edge technologies, such as artificial intelligence and machine learning, can enhance the ability to detect and respond to evolving cyber threats in real-time.</p>
+
+						</div>
+
+						<!--Adds padding to header-->
+						<div class="header-padding">
+
+								<!--Row and column divisions for formatting-->
+								<div class="row">
+										<div class="column">
+
+												<!--Displays image-->
+												<img src="s2.png" alt="">
+
+									</div>
+										<div class="column">
+
+												<!--Displays Header-->
+												<h2>Promote Education and Awareness</h2>
+
+												<!--Displays Text-->
+												<p>Empowering individuals with the knowledge needed to recognize and respond to potential threats is a cornerstone of effective cybersecurity. Ongoing education programs and awareness campaigns can significantly enhance the cybersecurity posture of individuals and organizations alike. By fostering a culture of cyber literacy, users become the first line of defense against phishing attempts, social engineering, and other cyber threats.</p>
+
+										</div>
+								</div>
+						</div>
+				</div>
+
+		<!--Side Bar Division-->
+		<div class="side-bar">
+				<!--Header section-->
+				<header>
+						<!--Close button-->
+						<div class="close-btn">
+								<i class="fas fa-times"></i>
+						</div>
+				</header>
+
+				<!--Menu Items-->
+				<div class="menu">
+
+						<!--Displays and links to Home webpage-->
+						<div class="item"><a href="home.html"><i class="fa-solid fa-house"></i>Home</a></div>
+
+						<!--Displays and links to Types webpage-->
+						<div class="item"><a href="types.html"><i class="fa-solid fa-cookie"></i>Types</a></div>
+
+						<!--Displays and links to the Problem webpage-->
+						<div class="item"><a href="problem.html"><i class="fa-solid fa-question"></i>The Problem</a></div>
+
+						<!--Displays Case Studies webpages dropdown-->
+						<div class="item"><a class="sub-btn"><i class="fa-solid fa-seedling"></i>Case Studies
+										<!--Dropdown arrow-->
+										<i class="fas fa-angle-right dropdown"></i>
+								</a>
+								<!--Sub-menu of Impacts-->
+								<div class="sub-menu">
+										<!--Displays and links to first case study webpage-->
+										<a href="caseStudy1.html" class="sub-item">The Healthcare Hijack</a>
+
+										<!--Displays and links to second case study Webpage-->
+										<a href="caseStudy2.html" class="sub-item">DNC Email Hack</a>
+								</div>
+						</div>
+
+					<!--Displays Solution webpage-->
+					<div class="item"><a href="sol.html"><i class="fa-regular fa-hand-point-up"></i>Solution</a></div>
+					</div>
+		</div>
+
+		<!--Javascript-->
+		<script>
+				$(document).ready(function () {
+						//Jquery for expanding the sidebar (menu button)
+						$('.menu-btn').click(function () {
+								//adds "active" class so sidebar it becomes visible
+								$('.side-bar').addClass('active');
+								//hides the menu button (3 bars) when side bar is open
+								$('.menu-btn').css("visibility", "hidden");
+						});
+
+						//Jquery for closing the sidebar (close button)
+						$('.close-btn').click(function () {
+								//removes "active" class so sidebar it becomes invisible
+								$('.side-bar').removeClass('active');
+								//shows the menu button (3 bars) when side bar is closed
+								$('.menu-btn').css("visibility", "visible");
+						});
+
+						//Jquery for toggle sub menus
+						$('.sub-btn').click(function () {
+								//Opens the submenu when the sub button is clicked
+								$(this).next('.sub-menu').slideToggle();
+								//Rotates the dropdown arrow
+								$(this).find('.dropdown').toggleClass('rotate');
+						});
+				})
+		</script>
+
+</body>
